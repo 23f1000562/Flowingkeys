@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowingKeys - Type Less. Flow More.</title>
+  <meta name="description" content="FlowingKeys is a premium, powerful keyboard automation tool for Windows. Paste, focus, and let it flow.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Petals background container -->
+  <div id="petal-container" class="petal-container"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <svg class="blossom-logo" viewBox="0 0 24 24" width="28" height="28">
+          <path d="M 12,2 C 11.5,5 9,6 8,8 C 7,10 8,12 10,12 C 11.5,12 12,10.5 12,10 C 12,10.5 12.5,12 14,12 C 16,12 17,10 16,8 C 15,6 12.5,5 12,2 Z M 12,10 C 11.5,13 9,14 8,16 C 7,18 8,20 10,20 C 11.5,20 12,18.5 12,18 C 12,18.5 12.5,20 14,20 C 16,20 17,18 16,16 C 15,14 12.5,13 12,10 Z M 10,12 C 7,11.5 6,9 4,8 C 2,7 0,8 0,10 C 0,11.5 1.5,12 2,12 C 1.5,12 0,12.5 0,14 C 0,16 2,17 4,16 C 6,15 7,12.5 10,12 Z M 14,12 C 17,11.5 18,9 20,8 C 22,7 24,8 24,10 C 24,11.5 22.5,12 22,12 C 22.5,12 24,12.5 24,14 C 24,16 22,17 20,16 C 18,15 17,12.5 14,12 Z" />
+        </svg>
+        <span>FlowingKeys</span>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#download" class="nav-link">Download</a>
+        <a href="#docs" class="nav-link">Docs</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="donate.html" class="nav-link">Support ❤️</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Light/Dark Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+          <div class="toggle-track">
+            <div class="toggle-thumb">
+              <!-- Sun Icon -->
+              <svg class="sun-icon" viewBox="0 0 24 24" width="14" height="14">
+                <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <!-- Moon Icon -->
+              <svg class="moon-icon" viewBox="0 0 24 24" width="14" height="14">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+        </button>
+
+        <a href="#download" class="btn-primary btn-get-started">
+          <svg viewBox="0 0 24 24" width="16" height="16">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" fill="currentColor"/>
+          </svg>
+          Get FlowingKeys
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-text-content">
+        <div class="badge-row">
+          <span class="badge">Open Source</span>
+          <span class="badge badge-accent">Free Forever</span>
+        </div>
+        <h1 class="hero-title">
+          Type Less.<br>
+          <span class="text-highlight">Flow</span> More.
+        </h1>
+        <p class="hero-description">
+          FlowingKeys is a simple, powerful keyboard automation tool for Windows. Paste your text or code, focus your target application, and let it flow.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#download" class="btn-primary btn-large">
+            <svg viewBox="0 0 24 24" width="20" height="20" class="win-icon">
+              <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.102zM10.95 1.937L24 0v11.55H10.95V1.937zM10.95 12.45H24v11.55l-13.05-1.937v-9.613z" fill="currentColor"/>
+            </svg>
+            Download for Windows
+            <svg viewBox="0 0 24 24" width="16" height="16" class="arrow-icon">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </a>
+          <a href="donate.html" class="btn-secondary btn-large">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+            </svg>
+            ❤️ Support the Project
+          </a>
+        </div>
+
+        <div class="hero-trust-badges">
+          <span class="trust-badge">
+            <svg viewBox="0 0 24 24" width="16" height="16" class="trust-icon text-success">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+            </svg>
+            Windows 10/11
+          </span>
+          <span class="trust-badge">
+            <svg viewBox="0 0 24 24" width="16" height="16" class="trust-icon text-heart">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+            </svg>
+            Open Source
+          </span>
+          <span class="trust-badge">
+            <svg viewBox="0 0 24 24" width="16" height="16" class="trust-icon text-shield">
+              <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z" fill="currentColor"/>
+            </svg>
+            Safe & Secure
+          </span>
+        </div>
+      </div>
+
+      <!-- MOCK WPF WINDOW -->
+      <div class="mock-window-wrapper">
+        <div class="mock-window">
+          <!-- Window Title Bar -->
+          <div class="window-titlebar">
+            <div class="window-logo">
+              <svg class="blossom-logo" viewBox="0 0 24 24" width="16" height="16">
+                <path d="M 12,2 C 11.5,5 9,6 8,8 C 7,10 8,12 10,12 C 11.5,12 12,10.5 12,10 C 12,10.5 12.5,12 14,12 C 16,12 17,10 16,8 C 15,6 12.5,5 12,2 Z M 12,10 C 11.5,13 9,14 8,16 C 7,18 8,20 10,20 C 11.5,20 12,18.5 12,18 C 12,18.5 12.5,20 14,20 C 16,20 17,18 16,16 C 15,14 12.5,13 12,10 Z M 10,12 C 7,11.5 6,9 4,8 C 2,7 0,8 0,10 C 0,11.5 1.5,12 2,12 C 1.5,12 0,12.5 0,14 C 0,16 2,17 4,16 C 6,15 7,12.5 10,12 Z M 14,12 C 17,11.5 18,9 20,8 C 22,7 24,8 24,10 C 24,11.5 22.5,12 22,12 C 22.5,12 24,12.5 24,14 C 24,16 22,17 20,16 C 18,15 17,12.5 14,12 Z" />
+              </svg>
+              <span>FlowingKeys</span>
+            </div>
+            <div class="window-controls">
+              <span class="win-min">&mdash;</span>
+              <span class="win-max"></span>
+              <span class="win-close">&times;</span>
+            </div>
+          </div>
+
+          <div class="window-body">
+            <!-- Sidebar Navigation -->
+            <div class="window-sidebar">
+              <button class="sidebar-item active" data-tab="dashboard">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"/>
+                </svg>
+                Dashboard
+              </button>
+              <button class="sidebar-item" data-tab="dashboard">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" fill="currentColor"/>
+                </svg>
+                Text Editor
+              </button>
+              <button class="sidebar-item" data-tab="settings">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="currentColor"/>
+                </svg>
+                Settings
+              </button>
+              <button class="sidebar-item" data-tab="hotkeys">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm0-3h12v2H6V6zm0 6h9v2H6v-2z" fill="currentColor"/>
+                </svg>
+                Hotkeys
+              </button>
+              <button class="sidebar-item" data-tab="history">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" fill="currentColor"/>
+                </svg>
+                History
+              </button>
+              <button class="sidebar-item" data-tab="about">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
+                </svg>
+                About
+              </button>
+            </div>
+
+            <!-- Workspace Content -->
+            <div class="window-content">
+              <!-- DASHBOARD TAB -->
+              <div id="tab-dashboard" class="app-tab-panel">
+                <div class="content-left">
+                  <h2 id="app-status-title">Ready to Flow 🌸</h2>
+                  <p id="app-status-desc">Paste your text, focus your target window, and hit Start.</p>
+
+                  <!-- Statistics Grid -->
+                  <div class="stats-grid">
+                    <div class="stat-card">
+                      <span class="stat-label">Characters</span>
+                      <span id="stat-chars" class="stat-value">1,248</span>
+                    </div>
+                    <div class="stat-card">
+                      <span class="stat-label">Words</span>
+                      <span id="stat-words" class="stat-value">208</span>
+                    </div>
+                    <div class="stat-card">
+                      <span class="stat-label">Lines</span>
+                      <span id="stat-lines" class="stat-value">36</span>
+                    </div>
+                  </div>
+
+                  <!-- Main Action Button -->
+                  <button id="app-btn-start" class="app-btn-primary">
+                    <svg viewBox="0 0 24 24" width="16" height="16" class="play-icon">
+                      <path d="M8 5v14l11-7z" fill="currentColor"/>
+                    </svg>
+                    <span>Start (F8)</span>
+                  </button>
+
+                  <!-- Control Buttons -->
+                  <div class="control-actions">
+                    <button id="app-btn-pause" class="app-btn-secondary" disabled>
+                      <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor"/>
+                      </svg>
+                      Pause (F9)
+                    </button>
+                    <button id="app-btn-stop" class="app-btn-secondary" disabled>
+                      <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path d="M6 6h12v12H6z" fill="currentColor"/>
+                      </svg>
+                      Stop (F10)
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Graphic Background Art inside App Mockup -->
+                <div class="app-art-overlay">
+                  <svg class="blossom-tree-svg" viewBox="0 0 100 100" preserveAspectRatio="xMaxYMax meet">
+                    <!-- Tree Trunk -->
+                    <path d="M60 100 Q 62 80 57 70 T 58 50 Q 52 45 48 50" stroke="#7A5648" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M57 70 Q 50 65 42 70" stroke="#7A5648" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Foliage / Blossom Circles -->
+                    <circle cx="58" cy="45" r="12" fill="#FFA5B5" opacity="0.6"/>
+                    <circle cx="48" cy="48" r="9" fill="#FFC0CB" opacity="0.7"/>
+                    <circle cx="65" cy="40" r="10" fill="#FFB7C5" opacity="0.8"/>
+                    <circle cx="54" cy="35" r="8" fill="#FFE4E1" opacity="0.7"/>
+                    <circle cx="42" cy="65" r="6" fill="#FFA5B5" opacity="0.5"/>
+                    
+                    <!-- Tiny falling petals inside window -->
+                    <path d="M 45,45 Q 40,43 45,40 Q 50,43 45,45 Z" fill="#FFB7C5" transform="rotate(15 45 45)"/>
+                    <path d="M 68,55 Q 65,53 68,50 Q 71,53 68,55 Z" fill="#FFB7C5" transform="rotate(-30 68 55)"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- SETTINGS TAB -->
+              <div id="tab-settings" class="app-tab-panel hidden">
+                <div class="app-panel-scroll">
+                  <h3>Preferences</h3>
+                  <div class="app-settings-list">
+                    <label class="app-setting-item">
+                      <span>Preserve Indentation</span>
+                      <input type="checkbox" checked>
+                    </label>
+                    <label class="app-setting-item">
+                      <span>Preserve Newlines</span>
+                      <input type="checkbox" checked>
+                    </label>
+                    <label class="app-setting-item">
+                      <span>Send Real Keys</span>
+                      <input type="checkbox">
+                    </label>
+                  </div>
+                  
+                  <!-- Support section -->
+                  <div class="app-support-box">
+                    <h5>Enjoying FlowingKeys? 🌸</h5>
+                    <p>FlowingKeys is free and open source.</p>
+                    <p class="support-subtext">If it saves you time, consider supporting its development.</p>
+                    <a href="donate.html" target="_blank" class="app-btn-primary support-btn-heart">
+                      ❤️ Support the Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ABOUT TAB -->
+              <div id="tab-about" class="app-tab-panel hidden">
+                <div class="app-panel-scroll">
+                  <h3>About FlowingKeys</h3>
+                  <p class="about-version">Version 1.0.0 (Open Source)</p>
+                  <p class="about-desc">
+                    A high-performance typing automation and accessibility utility for Windows. Built for developers, accessibility, and productivity.
+                  </p>
+
+                  <!-- Support section -->
+                  <div class="app-support-box">
+                    <h5>Enjoying FlowingKeys? 🌸</h5>
+                    <p>FlowingKeys is free and open source.</p>
+                    <p class="support-subtext">If it saves you time, consider supporting its development.</p>
+                    <a href="donate.html" target="_blank" class="app-btn-primary support-btn-heart">
+                      ❤️ Support the Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- OTHER TABS PLACEHOLDER -->
+              <div id="tab-other" class="app-tab-panel hidden">
+                <div class="app-panel-scroll">
+                  <h3 id="other-tab-title">Hotkeys</h3>
+                  <p class="coming-soon-text">Feature details are configurable in the full Windows application.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Countdown Overlay inside Mock App -->
+            <div id="app-countdown-overlay" class="app-overlay hidden">
+              <div class="overlay-card">
+                <h3>Switch to Target Window Now</h3>
+                <div id="overlay-countdown-num" class="countdown-num">3</div>
+                <button id="app-btn-cancel-countdown" class="app-btn-danger">Cancel</button>
+              </div>
+            </div>
+
+            <!-- Typing Simulation Overlay inside Mock App -->
+            <div id="app-typing-overlay" class="app-overlay hidden">
+              <div class="overlay-card">
+                <h3 id="typing-overlay-title">Typing...</h3>
+                <div class="typing-progress-bar">
+                  <div id="typing-progress-indicator" class="progress-indicator"></div>
+                </div>
+                <p><span id="typing-percent">0</span>% completed</p>
+                <div class="overlay-buttons">
+                  <button id="overlay-btn-pause" class="app-btn-secondary">Pause</button>
+                  <button id="overlay-btn-stop" class="app-btn-danger">Stop</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features" class="features-section">
+    <div class="features-header">
+      <span class="section-badge">Powerful Features</span>
+      <h2>Designed for Seamless Input</h2>
+    </div>
+    
+    <div class="features-container">
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper f-purple">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M13 2v9h9L11 22v-9H2L13 2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Fast & Smooth</h3>
+          <p>Adjust typing speed to match your target app workflow exactly, down to milliseconds.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper f-green">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Smart Controls</h3>
+          <p>Pause, resume, and stop typing anytime with convenient, system-wide global hotkeys.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper f-pink">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Safe & Reliable</h3>
+          <p>Built with safety in mind. No telemetry, no background capture. Your data stays yours.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper f-blue">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Developer Friendly</h3>
+          <p>Perfect for testing code, typing scripts, input simulation, and entering formatted text blocks.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper f-coral">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Open Source</h3>
+          <p>Built transparently by the community, for the community. Add features, fork, or audit easily.</p>
+        </div>
+      </div>
+
+      <!-- Mascot Graphics Sidebar Card -->
+      <div class="mascot-card">
+        <div class="cute-mascot">
+          <svg viewBox="0 0 120 120" class="mascot-svg">
+            <!-- White body -->
+            <path d="M 20 80 Q 20 25 60 25 Q 100 25 100 80 Q 100 100 80 100 Q 60 90 40 100 Q 20 100 20 80 Z" fill="#FFFFFF" stroke="#FFB7C5" stroke-width="4.5"/>
+            <!-- Left Hand -->
+            <path d="M 17 68 Q 5 58 10 50 Q 15 53 21 63 Z" fill="#FFFFFF" stroke="#FFB7C5" stroke-width="2.5" class="mascot-hand mascot-left-hand"/>
+            <!-- Right Hand -->
+            <path d="M 103 68 Q 115 58 110 50 Q 105 53 99 63 Z" fill="#FFFFFF" stroke="#FFB7C5" stroke-width="2.5" class="mascot-hand mascot-right-hand"/>
+            <!-- Eyes -->
+            <ellipse fill="#2C1A1C" cx="42" cy="52" rx="4" ry="5"/>
+            <ellipse fill="#2C1A1C" cx="78" cy="52" rx="4" ry="5"/>
+            <!-- Blush -->
+            <ellipse fill="#FFB7C5" cx="32" cy="58" rx="6" ry="4" opacity="0.6"/>
+            <ellipse fill="#FFB7C5" cx="88" cy="58" rx="6" ry="4" opacity="0.6"/>
+            <!-- Cute Smile -->
+            <path d="M 55 60 Q 60 66 65 60" stroke="#2C1A1C" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <!-- Floating Petals surrounding mascot -->
+            <path class="mascot-petal petal-1" d="M 15 15 Q 10 10 15 5 Q 20 10 15 15 Z" fill="#FFB7C5" opacity="0.8"/>
+            <path class="mascot-petal petal-2" d="M 105 20 Q 100 15 105 10 Q 110 15 105 20 Z" fill="#FFB7C5" opacity="0.8"/>
+            <path class="mascot-petal petal-3" d="M 112 75 Q 108 72 112 68 Q 116 72 112 75 Z" fill="#FFB7C5" opacity="0.8"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section id="docs" class="how-it-works">
+    <div class="how-header">
+      <span class="section-badge">Workflow</span>
+      <h2>How it works 🌸</h2>
+      <p>Simple steps to supercharge your typing automation.</p>
+    </div>
+
+    <div class="steps-container">
+      <div class="dotted-connection-line"></div>
+      
+      <!-- Step 1 -->
+      <div class="step-item">
+        <div class="step-number-badge">01</div>
+        <div class="step-icon-box">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M19 2h-4.18C14.4.84 13.3 0 12 0c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 18H5V4h2v3h10V4h2v16z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h4>Paste</h4>
+        <p>Paste your text or code into FlowingKeys.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-item">
+        <div class="step-number-badge">02</div>
+        <div class="step-icon-box">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h4>Focus</h4>
+        <p>Focus the window where you want to type.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-item">
+        <div class="step-number-badge">03</div>
+        <div class="step-icon-box">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h4>Flow</h4>
+        <p>Hit start and let FlowingKeys do the rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="about" class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <svg class="blossom-logo" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M 12,2 C 11.5,5 9,6 8,8 C 7,10 8,12 10,12 C 11.5,12 12,10.5 12,10 C 12,10.5 12.5,12 14,12 C 16,12 17,10 16,8 C 15,6 12.5,5 12,2 Z M 12,10 C 11.5,13 9,14 8,16 C 7,18 8,20 10,20 C 11.5,20 12,18.5 12,18 C 12,18.5 12.5,20 14,20 C 16,20 17,18 16,16 C 15,14 12.5,13 12,10 Z M 10,12 C 7,11.5 6,9 4,8 C 2,7 0,8 0,10 C 0,11.5 1.5,12 2,12 C 1.5,12 0,12.5 0,14 C 0,16 2,17 4,16 C 6,15 7,12.5 10,12 Z M 14,12 C 17,11.5 18,9 20,8 C 22,7 24,8 24,10 C 24,11.5 22.5,12 22,12 C 22.5,12 24,12.5 24,14 C 24,16 22,17 20,16 C 18,15 17,12.5 14,12 Z" />
+        </svg>
+        <span>FlowingKeys</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 FlowingKeys. Released under the MIT License.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
