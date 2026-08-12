@@ -86,6 +86,29 @@
         No subscription. No pressure. Just support if you find it useful.
       </p>
 
+      <!-- QR Code Payment State -->
+      <div id="payment-state" class="payment-state hidden">
+        <div class="donate-header">
+          <span class="donate-flower-badge">🌸</span>
+          <h2>Scan & Pay</h2>
+          <p class="donate-tagline">Scan with GPay, PhonePe, Paytm, or any UPI App</p>
+        </div>
+        <p class="donate-description">
+          Please scan the QR code below and transfer <strong id="scan-amount">₹50</strong> to support FlowingKeys.
+        </p>
+        <div class="qr-code-wrapper">
+          <img src="qr_code.jpg" alt="Google Pay QR Code" class="payment-qr-image">
+        </div>
+        <div class="payment-actions">
+          <button id="btn-confirm-payment" class="btn-primary btn-large donate-submit-btn">
+            I've Sent the Payment ❤️
+          </button>
+          <button id="btn-cancel-payment" class="btn-secondary">
+            Cancel
+          </button>
+        </div>
+      </div>
+
       <!-- Successful Donation Modal / Card state -->
       <div id="thank-you-state" class="thank-you-state hidden">
         <div class="thank-you-mascot">
@@ -181,9 +204,13 @@
 
       // Form Submit / Success
       const form = document.getElementById('donate-form');
+      const paymentState = document.getElementById('payment-state');
       const thankYouState = document.getElementById('thank-you-state');
       const paidAmountSpan = document.getElementById('paid-amount');
+      const scanAmountSpan = document.getElementById('scan-amount');
       const btnBackDonate = document.getElementById('btn-back-donate');
+      const btnConfirmPayment = document.getElementById('btn-confirm-payment');
+      const btnCancelPayment = document.getElementById('btn-cancel-payment');
 
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -196,20 +223,35 @@
           }
         }
         
+        scanAmountSpan.innerText = `₹${amount}`;
         paidAmountSpan.innerText = `₹${amount}`;
+        
         form.classList.add('hidden');
         document.querySelector('.donate-header').classList.add('hidden');
         document.querySelector('.donate-description').classList.add('hidden');
         document.querySelector('.donate-footer-note').classList.add('hidden');
+        paymentState.classList.remove('hidden');
+      });
+
+      btnConfirmPayment.addEventListener('click', () => {
+        paymentState.classList.add('hidden');
         thankYouState.classList.remove('hidden');
       });
 
-      btnBackDonate.addEventListener('click', () => {
+      btnCancelPayment.addEventListener('click', () => {
+        paymentState.classList.add('hidden');
         form.classList.remove('hidden');
         document.querySelector('.donate-header').classList.remove('hidden');
         document.querySelector('.donate-description').classList.remove('hidden');
         document.querySelector('.donate-footer-note').classList.remove('hidden');
+      });
+
+      btnBackDonate.addEventListener('click', () => {
         thankYouState.classList.add('hidden');
+        form.classList.remove('hidden');
+        document.querySelector('.donate-header').classList.remove('hidden');
+        document.querySelector('.donate-description').classList.remove('hidden');
+        document.querySelector('.donate-footer-note').classList.remove('hidden');
         
         // Reset to default
         amountBtns.forEach(b => b.classList.remove('active'));
