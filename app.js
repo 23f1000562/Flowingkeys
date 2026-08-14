@@ -295,3 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+const COUNTER_URL = "https://script.google.com/macros/s/AKfycbwWfFzIPdDNR5V9qIXqH_XcHdVBoCWptsZTvhMr5rlpG6z3oVzRwAe9-rRyGEfI0kZfTw/exec";
+
+function trackDownload() {
+  navigator.sendBeacon(COUNTER_URL);
+}
